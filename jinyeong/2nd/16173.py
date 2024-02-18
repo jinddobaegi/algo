@@ -47,6 +47,6 @@ def my_search(r, c):
     else:
         return
 
-my_search(0, 0)
 
+my_search(0, 0)
 print(res)
