@@ -1,3 +1,5 @@
+# 요세프스
+
 # 시간 초과 코드 ㅠㅠ
 
 # N, M = map(int, input().split())

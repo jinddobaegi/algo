@@ -1,7 +1,4 @@
 # 유기농 배추
-# 왜 visited[ni][nj] == 0, visited = [[0] * M for _ in range(N)]
-# 이라고 하면 안돼?
-# 0이나 False나 그게 그거자나
 
 import sys
 sys.setrecursionlimit(100000)
