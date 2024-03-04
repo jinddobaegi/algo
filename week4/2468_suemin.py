@@ -9,3 +9,4 @@ lst = [list(map(int, input().split())) for _ in range(N)]
 di = [0, 0, -1, 1]
 dj = [-1, 1, 0, 0]
 
+# 시간 없어서 못 풀었슴돠...
