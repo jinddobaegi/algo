@@ -28,6 +28,8 @@
 
 - 문제: [1987](https://www.acmicpc.net/problem/1987), [2468](https://www.acmicpc.net/problem/2468), [11724](https://www.acmicpc.net/problem/11724)
 
+벌금: 이윤정, 박수민, 송찬의
+
 ---
 
 ### 5회차 (24.03.04 ~ 24.03.10)
