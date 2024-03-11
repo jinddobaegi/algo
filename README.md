@@ -39,3 +39,11 @@
 - 문제: [3020](https://www.acmicpc.net/problem/3020), [7569](https://www.acmicpc.net/problem/7569), [13913](https://www.acmicpc.net/problem/13913)
 
 ---
+
+### 6회차 (24.03.11 ~ 24.03.17)
+
+- 출제자: 박수민, 이윤정, 정진영
+
+- 문제: [11725](https://www.acmicpc.net/problem/11725), [10026](https://www.acmicpc.net/problem/10026), [1707](https://www.acmicpc.net/problem/1707)
+
+---
