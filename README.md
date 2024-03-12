@@ -38,6 +38,8 @@
 
 - 문제: [3020](https://www.acmicpc.net/problem/3020), [7569](https://www.acmicpc.net/problem/7569), [13913](https://www.acmicpc.net/problem/13913)
 
+- 벌금: 박수민(7569, 13913), 송찬의
+
 ---
 
 ### 6회차 (24.03.11 ~ 24.03.17)
