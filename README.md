@@ -48,4 +48,6 @@
 
 - 문제: [11725](https://www.acmicpc.net/problem/11725), [10026](https://www.acmicpc.net/problem/10026), [1707](https://www.acmicpc.net/problem/1707)
 
+- 벌금: 송찬의(11725)
+
 ---
