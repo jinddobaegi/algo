@@ -51,3 +51,11 @@
 - 벌금: 송찬의(11725)
 
 ---
+
+### 7회차 (24.03.11 ~ 24.03.17)
+
+- 출제자: 정지수, 송찬의, 정일규
+
+- 문제: [1991](https://www.acmicpc.net/problem/1991), [18352](https://www.acmicpc.net/problem/18352), [14267](https://www.acmicpc.net/problem/14267)
+
+---
