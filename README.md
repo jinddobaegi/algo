@@ -66,4 +66,17 @@
 
 - 문제: [1753](https://www.acmicpc.net/problem/1753), [11779](https://www.acmicpc.net/problem/11779), [2473](https://www.acmicpc.net/problem/2473)
 
+- 벌금: 정지수(3문제, next 2000), 정일규(1문제, next 2000), 박수민(1문제, next 2000)
+
 ---
+
+### 벌금 누적합
+- 박수민: 4천원 -> next +2천원
+- 송찬의: 3천원
+- 이윤정: 1천원
+- 정일규: 1천원 -> next +2천원
+- 정지수: 3천원 -> next +2천원
+- 정진영: 0천원
+
+---
+
