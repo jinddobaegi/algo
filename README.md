@@ -59,3 +59,11 @@
 - 문제: [1991](https://www.acmicpc.net/problem/1991), [18352](https://www.acmicpc.net/problem/18352), [14267](https://www.acmicpc.net/problem/14267)
 
 ---
+
+### 8회차 (24.03.15 ~ 24.03.31)
+
+- 출제자: 박수민, 이윤정, 정진영
+
+- 문제: [1753](https://www.acmicpc.net/problem/1753), [11779](https://www.acmicpc.net/problem/11779), [2473](https://www.acmicpc.net/problem/2473)
+
+---
