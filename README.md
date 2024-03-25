@@ -64,6 +64,6 @@
 
 - 출제자: 박수민, 이윤정, 정진영
 
-- 문제: [1753](https://www.acmicpc.net/problem/1753), [11779](https://www.acmicpc.net/problem/11779), [1](https://www.acmicpc.net/problem/1)
+- 문제: [1753](https://www.acmicpc.net/problem/1753), [11779](https://www.acmicpc.net/problem/11779), [2473](https://www.acmicpc.net/problem/2473)
 
 ---
