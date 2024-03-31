@@ -34,12 +34,9 @@ distance = [float('inf')] * (N + 1)
 
 dijkstra(X)
 
-# print(distance)
-# 거리가 정확히 K인 도시들을 찾아서 출력
-result = [i for i, dist in enumerate(distance) if dist == K]
-# print(result)
-if result:
-    for city in sorted(result):
-        print(city)
-else:
+if K not in distance:
     print(-1)
+else:
+    for i in range(1, N+1):
+        if distance[i] == K:
+            print(i)
