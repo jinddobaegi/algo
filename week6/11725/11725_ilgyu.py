@@ -26,6 +26,7 @@ visited = [0] * (N+1)
 # for x in range(2, N+1):
 #     print(visited[x])
 
+
 # 2. bfs풀이
 q = deque()
 q.append(1)
