@@ -59,7 +59,7 @@ n = int(input())
 array = list(map(int, input().split()))
 
 array.sort()
-minTake = sys.maxsize
+minTake = sys.maxsize # 최대 정수값
 
 for i in range(n - 2): # 세개를 선택할거니까 끝에서 3개 선택하는경우 고려해서 n-2까지만 i를 돌아
     start = i + 1
