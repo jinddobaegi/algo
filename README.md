@@ -73,6 +73,13 @@
 
 ---
 
+### 10회차 (24.04.08 ~ 24.04.14)
+
+- 출제자: 박수민, 이윤정, 정진영
+- 문제: [1043](https://www.acmicpc.net/problem/1043), [1238](https://www.acmicpc.net/problem/1238), [1446](https://www.acmicpc.net/problem/1446)
+
+---
+
 ### 벌금 누적합(~8회차)
 
 - 박수민: 6천원
