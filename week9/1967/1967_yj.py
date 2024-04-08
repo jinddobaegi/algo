@@ -17,7 +17,7 @@ def dfs(s, dis):
             dfs(ch, dis + ch_d)
 
 # 루트에서 가장 먼 노드 찾기
-visited = [0] * (N+1)
+visited = [-1] * (N+1)
 visited[1] = 0    # 가중치 0으로 초기화
 dfs(1, 0)
 
