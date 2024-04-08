@@ -1,3 +1,5 @@
+# 임의의 노드에서 가장 멀리 있는 노드는 트리의 지름 양 끝점 중 하나이다.
+
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 6)
