@@ -34,7 +34,7 @@ def dijkstra(s, e):
             distance[next_node] = new_dist
             heapq.heappush(pq, (new_dist, next_node))
 
-    return distance[e]  # 도착 지점까지의 최단 거리
+    return distance[e]  # 도착 지점까지의 최단 시간
 
 # 오고 가는 데 걸리는 시간을 구해야 함
 # 각자 집에서 X 마을까지 가는 데 걸리는 최단 시간 + 반대로 집 올 때 최단 시간 더함
