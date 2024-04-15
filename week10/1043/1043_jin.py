@@ -30,7 +30,7 @@ def union(x, y):
     y = find_set(y)
 
     if x == y:
-        print('사이클 발생')
+        # print('사이클 발생')
         return
 
     # 2. 다른 집합이라면 같은 대표자로 수정
@@ -52,8 +52,9 @@ N, M = map(int, input().split())  # 사람 수 / 파티 수
 
 parent = [i for i in range(N+1)]
 true_info = list(map(int, input().split()))  # 진실 아는 사람 수
+party_info = list(list(map(int, input().split())) for _ in range(M))
 
-if len(true_info) == 1:
+if true_info[0] == 0:
     print(M)
 
 else:
@@ -64,8 +65,6 @@ else:
 
     # 파티를 한 번 싹 돌면서 진실을 아는 사람들의 집합을 만들고
     # 마지막에 다시 돌면서 진실을 아는 사람이 있는지 확인
-    party_info = list(list(map(int, input().split())) for _ in range(M))
-
     for i in range(M):
         party = party_info[i]
         n_of_party = party[0]
