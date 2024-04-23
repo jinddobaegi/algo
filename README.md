@@ -90,7 +90,7 @@
 
 ---
 
-### 12회차 (24.04.22 ~ 24.04.28)
+### 12회차 (24.04.29 ~ 24.05.05)
 
 - 출제자: 박수민, 이윤정, 정진영
 - 문제: [1922](https://www.acmicpc.net/problem/1922), [12015](https://www.acmicpc.net/problem/12015), [17471](https://www.acmicpc.net/problem/17471)
