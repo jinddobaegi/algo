@@ -28,7 +28,7 @@ for _ in range(M):
 edge.sort(key=lambda x: x[2])
 
 # Make set
-parents = [0] * (N+1)  # 0 사용 안함
+parents = [x for x in range(N+1)]  # 0 사용 안함
 
 # Find set
 def find_set(x):
@@ -60,7 +60,6 @@ def kruskal():
     total = 0
     for f, t, w in edge:
         if find_set(f) != find_set(t):
-            print('정보', f, t, w)
             cnt += 1
             total += w
             union(f, t)
