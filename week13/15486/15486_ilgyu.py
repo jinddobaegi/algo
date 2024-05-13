@@ -14,7 +14,7 @@ for now in range(N):
 
     # 마지막날 안 넘어가면
     if now + T < N + 1:
-        dp[now + T] = max(dp[now + T00], dp[now] + P)
+        dp[now + T] = max(dp[now + T], dp[now] + P)
         # 예제기준
         # 1일에 얻을 수 있는 이익은 작업일3일, 10
         # 3일차에(dp[3]) 얻는 이익은
