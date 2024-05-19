@@ -114,7 +114,7 @@
 - 출제자: 정진영, 송찬의
 - 문제: [1725](https://www.acmicpc.net/problem/1725), [21610](https://www.acmicpc.net/problem/21610)
 - 
-- 벌금: 
+- 안 푼사람(다음 주에 풀어야 됨): 
 
 ---
 
