@@ -2,19 +2,6 @@ from sys import stdin
 
 input = stdin.readline
 
-# 구름은 네 칸짜리
-# 맨 아래 왼쪽 구석에 생김
-# d: 방향, s: 거리
-# d는 8방향이 있음
-# 총 M번 이동
-# 이동하고 바구니에 1씩 비를 내림, 구름 없어짐
-# 물 증가한 바구니에서
-# 대각선에 있는, 물 있는 "바구니 수"만큼 물 양 증가
-# 이동할 땐 경계 끝이 경계 처음과 이어져있는데
-# 물 복사 할 땐 경계 넘어가면 안됨
-# 물 양 2 이상인 모든 칸에 구름이 생기고 물의 양이 2 줄어듦
-# 이때 처음 구름 있던 자리는 빼고 구름이 생김
-
 N, M = map(int, input().split())
 
 arr = list(list(map(int, input().split())) for _ in range(N))
@@ -23,31 +10,19 @@ arr = list(list(map(int, input().split())) for _ in range(N))
 dr = [0, 0, -1, -1, -1, 0, 1, 1, 1]
 dc = [0, -1, -1, 0, 1, 1, 1, 0, -1]
 
-# 대각선 체크용
-diag_dr = [-1, -1, 1, 1]
-diag_dc = [-1, 1, 1, -1]
-
-directions = list()
-distances = list()
-for _ in range(M):
-    d, s = map(int, input().split())
-    directions.append(d)
-    distances.append(s)
-
 # Clouds Init
-clouds = [(N-2, 1), (N-2, 2), (N-1, 1), (N-1, 2)]
+clouds = [(N-2, 0), (N-2, 1), (N-1, 0), (N-1, 1)]
 
 for i in range(M):
-    tmp_clouds = list()  # 이동한 구름 위치 담을 것임
+    d, s = map(int, input().split())
 
-    d = directions[i]
-    s = distances[i]
+    tmp_clouds = list()  # 이동한 구름 위치 담을 것임
 
     # 구름마다 확인
     for cloud in clouds:
         # directions에 있는 방향들로 이동
-        nr = cloud[0] + dr[d] * s
-        nc = cloud[1] + dc[d] * s
+        nr = cloud[0] + (dr[d] * s)
+        nc = cloud[1] + (dc[d] * s)
 
         # 범위 안에 오도록 좌표 수정
         while nr < 0:
@@ -68,12 +43,12 @@ for i in range(M):
     for tmp_cloud in tmp_clouds:
         tmp_r = tmp_cloud[0]
         tmp_c = tmp_cloud[1]
-        
+
         # 대각 바구니 확인
         tmp_cnt = 0
-        for k in range(4):
-            tmp_nr = tmp_r + diag_dr[k]
-            tmp_nc = tmp_c + diag_dc[k]
+        for diag_dr, diag_dc in ((-1, -1), (-1, 1), (1, -1), (1, 1)):
+            tmp_nr = tmp_r + diag_dr
+            tmp_nc = tmp_c + diag_dc
 
             if 0 <= tmp_nr < N and 0 <= tmp_nc < N and arr[tmp_nr][tmp_nc]:
                 tmp_cnt += 1
