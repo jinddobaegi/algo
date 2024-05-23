@@ -1,3 +1,23 @@
+N = int(input())
+
+arr = []
+for _ in range(N):
+    arr.append(int(input()))
+
+for i in range(N):
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 실패...
 
 # from collections import deque

@@ -70,6 +70,7 @@
 
 - 출제자: 송찬의, 정일규, 정지수
 - 문제: [1931](https://www.acmicpc.net/problem/1931), [1967](https://www.acmicpc.net/problem/1967), [5014](https://www.acmicpc.net/problem/5014)
+- 
 - 벌금: 정일규(1문제 * 2000)
 
 ---
@@ -78,6 +79,7 @@
 
 - 출제자: 박수민, 이윤정, 정진영
 - 문제: [1043](https://www.acmicpc.net/problem/1043), [1238](https://www.acmicpc.net/problem/1238), [1446](https://www.acmicpc.net/problem/1446)
+- 
 - 벌금: 이윤정(1문제 * 2000)
 
 ---
@@ -86,6 +88,7 @@
 
 - 출제자: 송찬의, 정일규, 정지수
 - 문제: [1197](https://www.acmicpc.net/problem/1197), [4386](https://www.acmicpc.net/problem/4386), [10025](https://www.acmicpc.net/problem/10025)
+- 
 - 벌금: 송찬의(1문제 * 2000원), 정일규(1문제 * 3000)
 
 ---
@@ -94,6 +97,7 @@
 
 - 출제자: 박수민, 이윤정, 정진영
 - 문제: [1922](https://www.acmicpc.net/problem/1922), [12015](https://www.acmicpc.net/problem/12015), [17471](https://www.acmicpc.net/problem/17471)
+- 
 - 벌금: 송찬의(2문제 * 3000원), 박수민(1문제 * 3000원)
 
 ---
@@ -102,11 +106,19 @@
 
 - 출제자: 송찬의, 정일규, 정지수
 - 문제: [1725](https://www.acmicpc.net/problem/1725), [2667](https://www.acmicpc.net/problem/2667), [15486](https://www.acmicpc.net/problem/15486)
-- 벌금: 
 
 ---
 
-### 벌금 누적합(~12회차)
+### 14회차 (24.05.13 ~ 24.05.19)
+
+- 출제자: 정진영, 송찬의
+- 문제: [1725](https://www.acmicpc.net/problem/1725), [21610](https://www.acmicpc.net/problem/21610)
+
+- 안 푼사람(다음 주에 풀어야 됨): 
+
+---
+
+### 벌금 누적합(~13회차)
 
 - 박수민: 9천원
 - 송찬의: 1만 2천원
