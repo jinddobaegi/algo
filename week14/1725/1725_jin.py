@@ -20,6 +20,10 @@ for i in range(N):
     left_idx = i
     while stack and stack[-1][1] > h:
         left_idx, left_h = stack.pop()
+        # left_idx를 갱신해주는 이유
+        # 이번에 낮아진 막대의 높이와
+        # 그 막대로 갈 수 있는 가장 왼쪽의 인덱스를 저장해주기 위해서
+
         # 왼쪽 막대 높이 기준으로 계산
         max_v = max((i-left_idx) * left_h, max_v)
         # 원래는 가로 길이가
