@@ -11,7 +11,8 @@ input = sys.stdin.readline
 N = int(input())
 dp = [0] * (N + 1)
 for i in range(N):
-    time, pay = map(int, input().split())   
+    time, pay = map(int, input().split())
+    
     if i + time <= N:
         dp[i + time] = max(dp[i + time], dp[i] + pay)
         # print(dp, "time",dp[i + time],"pay",dp[i] + pay ) 
