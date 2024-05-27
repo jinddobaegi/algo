@@ -12,4 +12,5 @@ for i in range(1, N + 1):
     if end_day <= N:
         dp[end_day] = max(dp[end_day], dp[i - 1] + P[i])
     dp[i] = max(dp[i], dp[i - 1])
+
 print(max(dp))
