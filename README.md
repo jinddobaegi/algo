@@ -109,12 +109,12 @@
 
 ---
 
-### 14회차 (24.05.13 ~ 24.05.19)
+### 14회차 (24.05.13 ~ 24.05.26)
 
 - 출제자: 정진영, 송찬의
-- 문제: [1725](https://www.acmicpc.net/problem/1725), [21610](https://www.acmicpc.net/problem/21610)
+- 문제: [1725](https://www.acmicpc.net/problem/1725), [21610](https://www.acmicpc.net/problem/21610), [1149](https://www.acmicpc.net/problem/1149), [17404](https://www.acmicpc.net/problem/17404)
 
-- 안 푼사람(다음 주에 풀어야 됨): 
+- 벌금: 
 
 ---
 

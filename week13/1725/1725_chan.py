@@ -34,7 +34,7 @@ stack = [] #0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ~
 result = 0
 
 for i in range(row+1):
-    while stack and graph[stack[-1]] > graph[i]: 
+    while stack and graph[stack[-1]] > graph[i]:
         height = graph[stack.pop()]
         width = i
         if stack:
