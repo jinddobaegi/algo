@@ -34,7 +34,8 @@ def bfs(r, c):
             nr = r + dr
             nc = c + dc
             if 0 <= nr < N and 0 <= nc < M:
-                if (lab[nr][nc] == 0 or lab[nr][nc] == 2) and visited[nr][nc] == 0:
+                if (lab_copy[nr][nc] == 0 or lab_copy[nr][nc] == 2) and visited[nr][nc] == 0:
+                    lab_copy[nr][nc] = 2
                     visited[nr][nc] = 1
                     q.append((nr, nc))
 
@@ -63,6 +64,7 @@ for comb in combs:
             if lab_copy[n][m] == 2:
                 bfs(n, m)
     tmp = 0
+    # 안전구역 체크
     for r in range(N):
         for c in range(M):
             if lab_copy[r][c] == 0:
@@ -70,8 +72,5 @@ for comb in combs:
 
     max_v = max(max_v, tmp)
 
-    # 다 돌면 복구
-    for y, x in comb:
-        lab_copy[y][x] = 0
 
 print(max_v)
