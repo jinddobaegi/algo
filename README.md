@@ -125,6 +125,13 @@
 
 ---
 
+### 16회차 (24.06.03 ~ 24.06.09)
+
+- 출제자: 송찬의, 정일규, 정지수
+- 문제: [1062](https://www.acmicpc.net/problem/1062), [1325](https://www.acmicpc.net/problem/1325), [2213](https://www.acmicpc.net/problem/2213)
+
+---
+
 ### 벌금 누적합(~15회차)
 
 - 박수민: 1만 3천원
