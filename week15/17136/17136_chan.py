@@ -3,7 +3,7 @@ sys.stdin = open("week15/17136/17136.txt")
 input = sys.stdin.readline
 from collections import deque
 
-graph = [list(map(int, input().split())) for _ in range(10)]
+# graph = [list(map(int, input().split())) for _ in range(10)]
 
 # 첫시도
 # visited = [[0] * 10 for _ in range(10)]
@@ -92,3 +92,52 @@ graph = [list(map(int, input().split())) for _ in range(10)]
 
 
 # 세번째 시도
+# 색종이는 5장씩 있으며 정사각형이고 1 부터 5까지이다.
+# 1이 적힌 모든 칸을 색종이로 채우는데 필요한 색종이의 최소개수 카운트 / 불가능한 경우 -1을 출력
+
+graph = [list(map(int , input().split())) for _ in range(10)]
+# for i in graph:
+#     print(i)
+paper = [5,5,5,5,5,5]
+min_count = 1000
+
+def true_false_paper(x, y, size):
+    if x + size > 10 or y + size > 10: #범위 안에 있는지 확인
+        return False
+    for i in range(size):
+        for j in range(size):
+            if graph[x + i][y + j] != 1: # 범위안에 있는데 1이 아닌게 있으면 False
+                return False
+    return True # 나비머지의 경우에는 트루
+
+def input_paper(x, y, size, value): #종이 추가 밑 제거가능
+    for i in range(size):
+        for j in range(size):
+            graph[x + i][y + j] = value
+
+
+def dfs(x, y, count):
+    global min_count
+    if x == 10: # 10이 되면 종료한다.
+        min_count = min(min_count, count)
+        return
+    
+    if y == 10: # y열 먼저 검사하고 10이되면 다음으로 넘어간다 
+        dfs(x + 1, 0, count)
+        return
+    
+    if graph[x][y] == 1: #1인경우
+        for size in range(5, 0, -1):
+            if paper[size] > 0 and true_false_paper(x, y, size): 
+                input_paper(x, y, size, 0) # 종이 추가
+                paper[size] -= 1
+                dfs(x, y + 1, count + 1)
+                input_paper(x, y, size, 1) # 종이 제거(초기화)
+                paper[size] += 1 #초기화
+    
+    else: # 아닌경우 
+        dfs(x, y + 1, count)
+
+dfs(0, 0, 0)
+
+print(min_count if min_count != 1000 else -1)
