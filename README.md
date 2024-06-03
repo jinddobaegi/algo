@@ -70,7 +70,7 @@
 
 - 출제자: 송찬의, 정일규, 정지수
 - 문제: [1931](https://www.acmicpc.net/problem/1931), [1967](https://www.acmicpc.net/problem/1967), [5014](https://www.acmicpc.net/problem/5014)
-- 
+
 - 벌금: 정일규(1문제 * 2000)
 
 ---
@@ -79,7 +79,7 @@
 
 - 출제자: 박수민, 이윤정, 정진영
 - 문제: [1043](https://www.acmicpc.net/problem/1043), [1238](https://www.acmicpc.net/problem/1238), [1446](https://www.acmicpc.net/problem/1446)
-- 
+
 - 벌금: 이윤정(1문제 * 2000)
 
 ---
@@ -88,7 +88,7 @@
 
 - 출제자: 송찬의, 정일규, 정지수
 - 문제: [1197](https://www.acmicpc.net/problem/1197), [4386](https://www.acmicpc.net/problem/4386), [10025](https://www.acmicpc.net/problem/10025)
-- 
+
 - 벌금: 송찬의(1문제 * 2000원), 정일규(1문제 * 3000)
 
 ---
@@ -97,7 +97,7 @@
 
 - 출제자: 박수민, 이윤정, 정진영
 - 문제: [1922](https://www.acmicpc.net/problem/1922), [12015](https://www.acmicpc.net/problem/12015), [17471](https://www.acmicpc.net/problem/17471)
-- 
+
 - 벌금: 송찬의(2문제 * 3000원), 박수민(1문제 * 3000원)
 
 ---
@@ -121,11 +121,13 @@
 - 출제자: 박수민, 이윤정, 정진영
 - 문제: [14502](https://www.acmicpc.net/problem/14502), [17136](https://www.acmicpc.net/problem/17136), [14500](https://www.acmicpc.net/problem/14500)
 
+- 벌금: 박수민(1문제 * 4000원)
+
 ---
 
-### 벌금 누적합(~14회차)
+### 벌금 누적합(~15회차)
 
-- 박수민: 9천원
+- 박수민: 1만 3천원
 - 송찬의: 1만 2천원
 - 이윤정: 4천원
 - 정일규: 6천원
