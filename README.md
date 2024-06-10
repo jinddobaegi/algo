@@ -135,7 +135,7 @@
 ### 17회차 (24.06.10 ~ 24.06.16)
 
 - 출제자: 박수민, 이윤정, 정진영
-- 문제: [1504](https://www.acmicpc.net/problem/1504), [](https://www.acmicpc.net/problem/), [](https://www.acmicpc.net/problem/)
+- 문제: [1504](https://www.acmicpc.net/problem/1504), [1759](https://www.acmicpc.net/problem/1759), [28420](https://www.acmicpc.net/problem/28420)
 
 ---
 
