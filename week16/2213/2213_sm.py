@@ -12,7 +12,7 @@ input = sys.stdin.readline
 # 이거 답은 나오는데 메모리 초과..
 
 n = int(input())
-dp = [0 for _ in range(n+1)]
+dp = [[] for _ in range(n+1)]
 bt = list(range(n+1))
 
 bt_result = []
