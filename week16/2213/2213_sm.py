@@ -15,6 +15,7 @@ n = int(input())
 dp = [0 for _ in range(n+1)]
 bt = list(range(n+1))
 
+
 bt_result = []
 w = list(map(int, input().split()))
 ad = [[0 for _ in range(n+1)] for _ in range(n+1)] # 인접한 노드 연결 정도

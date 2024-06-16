@@ -18,25 +18,28 @@ def dfs(s, cnt):
     # a, c, i, n, t -> 무조건 배워야 돼
     # 최소한 k개는 배워야되니까..
     if cnt == k - 5:
-        tmp = 0  # 현재 읽을 수 있는 단어 개수 저장
-
-        # 목록 하나씩 확인하면서 돌면서
-        for word in words:
-            # 배운 글자로 해당 단어를 읽을 수 있는지 확인
-            is_contain = True
-
-            for w in word:
-                # 배우지 않은 글자 있으면
-                if not check[ord(w) - ord('a')]:
-                    is_contain = False
-                    break   # 단어 확인 중단
-
-            # 해당 단어를 읽을 수 있는 경우
-            if is_contain:
-                tmp += 1  # 개수 check
-
+        tmp = sum(all(check[ord(w) - ord('a')] for w in word) for word in words)
         ans = max(ans, tmp)
         return
+        # tmp = 0  # 현재 읽을 수 있는 단어 개수 저장
+        #
+        # # 목록 하나씩 확인하면서 돌면서
+        # for word in words:
+        #     # 배운 글자로 해당 단어를 읽을 수 있는지 확인
+        #     is_contain = True
+        #
+        #     for w in word:
+        #         # 배우지 않은 글자 있으면
+        #         if not check[ord(w) - ord('a')]:
+        #             is_contain = False
+        #             break   # 단어 확인 중단
+        #
+        #     # 해당 단어를 읽을 수 있는 경우
+        #     if is_contain:
+        #         tmp += 1  # 개수 check
+        #
+        # ans = max(ans, tmp)
+        # return
 
     for i in range(s, 26):
         if not check[i]:

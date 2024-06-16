@@ -8,8 +8,6 @@
 최대 해킹할 수 있는 컴퓨터 번호 출력
 '''
 
-
-
 import sys
 input = sys.stdin.readline
 
@@ -36,7 +34,7 @@ def bfs(s):
 
 n, m = map(int, input().split())
 
-graph = [0 for _ in range(n + 1)]
+graph = [[] for _ in range(n + 1)]
 for _ in range(m):
     a, b = map(int, input().split())
     # 반대 방향으로 간선 연결해줘야 신뢰 관계가 연결이 되니까
