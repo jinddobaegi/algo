@@ -27,7 +27,7 @@ else:  # 짝
     c = (N//2) - 1
 
 arr[r][c] = 1
-target_r, target_c = r, c  # target 만나면 저장
+target_r, target_c = r+1, c+1  # target 만나면 저장
 r -= 1  # 2를 넣을 위치로 미리 조정
 
 t = 1  # 2~N까지 시점을 나타낼 것임
