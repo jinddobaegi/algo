@@ -40,11 +40,11 @@ import sys
 sys.stdin = open('week18/16236/16236.txt')
 input = sys.stdin.readline
 
-N = int(input())
-graph = [list(map(int, input().split())) for _ in range(N)]
+# N = int(input())
+# graph = [list(map(int, input().split())) for _ in range(N)]
 
-for _ in graph:
-    print(_)
+# for _ in graph:
+#     print(_)
 
 # 물고기의 크기가 상어의 크기보다 작다면 먹으러간다.
 # 같은 크기의 물고기가 있다면 최소경로에 있는 물고기를 먼저 먹으러간다.
@@ -56,34 +56,99 @@ for _ in graph:
 # 경로의 길이만큼 시간초 추가 +1 씩
 # 0만 남거나 먹을 수 없는 것들만 남을때 까지 반복
 # 시간 출력
-def check_load():
+# def check_load():
     
 
-def check_size(shark):
-    start_x, start_y = shark
-    min_load = 20*20*20
-    for i in range(N):
-        for j in range(N):
-            if graph[i][j] < shark_size:
-                min_load = min(min_load, check_load(start_x,start_y)) #최소경로를 찾고 그중 제일 작은경로의 시간을 리턴/ 그리고 그 정점을 0으로 초기화 / 그리고 상어크기 증가
-            if min_load == check_load(start_x,start_y):
-                graph[start_x][start_y] = 0
-                new_shark = (i,j)
+# def check_size(shark):
+#     start_x, start_y = shark
+#     min_load = 20*20*20
+#     for i in range(N):
+#         for j in range(N):
+#             if graph[i][j] < shark_size:
+#                 min_load = min(min_load, check_load(start_x,start_y)) #최소경로를 찾고 그중 제일 작은경로의 시간을 리턴/ 그리고 그 정점을 0으로 초기화 / 그리고 상어크기 증가
+#             if min_load == check_load(start_x,start_y):
+#                 graph[start_x][start_y] = 0
+#                 new_shark = (i,j)
                 
-                check_size(new_shark)
+#                 check_size(new_shark)
 
     
 
-shark_size = 2
-shark = ()
+# shark_size = 2
+# shark = ()
+# # 아기 상어의 위치 찾기
+# for i in range(N):
+#     for j in range(N):
+#         if graph[i][j] == 9:
+#             shark = (i, j)
+#             graph[i][j] = 0
+#             break
+# # print(shark)
+# check_size()
+
+from collections import deque
+
+def bfs(shark_x, shark_y, shark_size):
+    directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+    queue = deque([(shark_x, shark_y, 0)])
+    visited = [[False] * N for _ in range(N)]
+    visited[shark_x][shark_y] = True
+    fish_list = []
+
+    while queue:
+        x, y, dist = queue.popleft()
+        
+        for dx, dy in directions:
+            nx, ny = x + dx, y + dy
+            
+            if 0 <= nx < N and 0 <= ny < N and not visited[nx][ny]:
+                if graph[nx][ny] <= shark_size:
+                    visited[nx][ny] = True
+                    queue.append((nx, ny, dist + 1))
+                    
+                    if 0 < graph[nx][ny] < shark_size:
+                        fish_list.append((dist + 1, nx, ny))
+    
+    fish_list.sort()
+    return fish_list
+
+def solve():
+    shark_size = 2
+    fish_eaten = 0
+    total_time = 0
+    shark_x, shark_y = shark
+
+    while True:
+        fish_list = bfs(shark_x, shark_y, shark_size)
+        
+        if not fish_list:
+            break
+        
+        dist, fish_x, fish_y = fish_list[0]
+        graph[fish_x][fish_y] = 0
+        total_time += dist
+        fish_eaten += 1
+        
+        if fish_eaten == shark_size:
+            shark_size += 1
+            fish_eaten = 0
+        
+        shark_x, shark_y = fish_x, fish_y
+    
+    print(total_time)
+
+# 입력 받기
+N = int(input())
+graph = [list(map(int, input().split())) for _ in range(N)]
+
 # 아기 상어의 위치 찾기
+shark = ()
 for i in range(N):
     for j in range(N):
         if graph[i][j] == 9:
             shark = (i, j)
             graph[i][j] = 0
             break
-# print(shark)
-check_size()
 
+solve()
 
