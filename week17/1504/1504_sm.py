@@ -25,7 +25,7 @@ for i in range(e):
 
 v1, v2 = map(int, input().split())
 
-ans = sys.maxsize
+ans = float('inf')
 
 
 def dijkstra(start, s):
