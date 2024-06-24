@@ -137,11 +137,9 @@ def solve():
     
     print(total_time)
 
-# 입력 받기
 N = int(input())
 graph = [list(map(int, input().split())) for _ in range(N)]
 
-# 아기 상어의 위치 찾기
 shark = ()
 for i in range(N):
     for j in range(N):
