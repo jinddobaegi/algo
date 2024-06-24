@@ -30,7 +30,7 @@ ans = sys.maxsize
 
 def dijkstra(start, s):
     # 시작노드로부터 모든 노드까지 최단거리 저장할 리스트 무한대로 초기화
-    distance = [ans] * (s+1) # 이거 몰랐는데 블로그 참고함
+    distance = [ans] * (n+1) # 이거 몰랐는데 블로그 참고함
 
     q = []
     heapq.heappush(q, [0, start])
@@ -46,15 +46,15 @@ def dijkstra(start, s):
             continue
 
         # 현재 노드 인접노드 확인
-        for n, w in edges[node]:
+        for next, w in edges[node]:
             # 인접 노드 거쳐가는 새로운 거리 계산해주기
             cost = dist + w
 
             # 새로운 거리가 기존 거리보다 짧으면 갱신
             # 우선순위 큐에 추가
-            if distance[n] > cost:
-                distance[n] = cost
-                heapq.heappush(q, [cost, n])
+            if distance[next] > cost:
+                distance[next] = cost
+                heapq.heappush(q, [cost, next])
 
     return distance
 
