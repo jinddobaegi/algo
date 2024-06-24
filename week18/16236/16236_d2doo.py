@@ -28,15 +28,18 @@ def bfs(time, i, j):
     if len(lst) == 0:
         return 0
     else:
-        return lst.sort()
-
+        # return lst.sort()
+        lst.sort()
+        return lst
 
 N = int(input())
 arr = [list(map(int, input().split())) for _ in range(N)]
 
-# 델타
-di = [-1, 1, 0, 0]
-dj = [0, 0, -1, 1]
+# 델타 (상좌우하)
+# di = [-1, 1, 0, 0]
+# dj = [0, 0, -1, 1]
+di = [-1, 0, 0, 1]
+dj = [0, -1, 1, 0]
 
 for x in range(N):
     for y in range(N):
