@@ -16,7 +16,7 @@ N=5인 경우 6의 좌표는 (4,3)
 그 과정에서 숫자의 위치를 기록하고, 마지막으로 해당 위치를 출력하고
 배열의 모든 행을 출력하고, 1부터의 순서를 출력 ㄱ
 '''
-# 틀렸는데 어딜 고쳐야될지 모르곘어요
+
 import sys
 input = sys.stdin.readline
 
@@ -65,8 +65,8 @@ while True:
                 # 다음 숫자로 이동
                 num -= 1
 
-                print(x, y) # 현재 위치
-                print(graph) # 현재 배열
+                # print(x, y) # 현재 위치
+                # print(graph) # 현재 배열
 
     # 중앙 위치에 오면
     if x == n//2 and y == n//2:
