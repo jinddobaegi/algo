@@ -1,5 +1,6 @@
-from sys import stdin
+from sys import stdin, setrecursionlimit
 
+setrecursionlimit(10**6)  # 얘 안하면 런타임에러
 input = stdin.readline
 
 # H: 구멍
@@ -12,6 +13,7 @@ input = stdin.readline
 N, M = map(int, input().split())
 arr = list(input().rstrip() for _ in range(N))
 visited = list([0] * M for _ in range(N))
+dp = list([-1] * M for _ in range(N))  # 처음에 0으로 초기화해서 시간초과뜸
 dr = (-1, 0, 1, 0)
 dc = (0, 1, 0, -1)
 max_v = 0
@@ -23,7 +25,12 @@ def dfs(r, c, cnt):
     if max_v == -1:
         return
 
+    # 이거 있어야 시간초과 안 뜸
+    if dp[r][c] >= cnt:
+        return
+
     visited[r][c] = 1
+    dp[r][c] = cnt
     max_v = max(cnt, max_v)
     x = int(arr[r][c])
 
