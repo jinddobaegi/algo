@@ -11,7 +11,9 @@ input = stdin.readline
 def dfs(f, cnt, dist):
     global min_v
 
-    if cnt == N:
+    # 처음엔 앞의 조건만 있었는데
+    # 현재 노드가 다시 출발점과 같다는 조건을 추가해서 맞음
+    if cnt == N and f == start:
         min_v = min(dist, min_v)
         return
 
@@ -30,10 +32,12 @@ for i in range(N):
         if x:
             adj_list[i].append((j, x))
 
-# dfs로 가다가
-# 출발지 나오면 거리 갱신할 것임
+# dfs로 가면서
+# 거리 합하고
+# 출발지 나오면 거리 갱신
 
 min_v = int(1e8)  # 최대가 1e7
 visited = [0] * N
-dfs(0, 0, 0)
+start = 0
+dfs(start, 0, 0)
 print(min_v)
