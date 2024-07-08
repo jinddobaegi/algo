@@ -160,7 +160,7 @@ _1주 간의 신나는 여름 휴가~_
 ### 20회차 (24.07.08 ~ 24.07.14)
 
 - 출제자: 송찬의, 정지수, 정진영
-- 문제: [9095](https://www.acmicpc.net/problem/9095), [](https://www.acmicpc.net/problem/), [](https://www.acmicpc.net/problem/)
+- 문제: [1789](https://www.acmicpc.net/problem/1789), [9095](https://www.acmicpc.net/problem/9095), [11811](https://www.acmicpc.net/problem/11811)
 
 ---
 
