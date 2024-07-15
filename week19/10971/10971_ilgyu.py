@@ -9,7 +9,7 @@ def dfs(s, first):
         last_city = res[-1]
         if costs[last_city][first] != 0: # 마지막도시에서 시작도시로 길이 있으면
             total += costs[last_city][first] # 마지막 도시에서 시작점으로 가는 비용
-            ans = min(ans, total)
+            ans = min(ans, total) # 값만 갱신하고 다시 빠꾸
             total -= costs[last_city][first]
         return
     # 0-1-2-3 순서로 방문시
