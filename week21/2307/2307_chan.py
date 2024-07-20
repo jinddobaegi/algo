@@ -11,11 +11,39 @@
 # 다시 다익스트라를 이용해서 각각의 최소시간을 구하고
 # 그중 가장 큰값을 가지고있는 시간과 처음의 최소시간의 차를 결과값으로 출력한다.
 
+# 최소경로를 찾고 
+# 경로의 노드값을 이용해서 각 노드를 검문소로 채택 및 도로를 아주 큰값을 넣기
+# 가장 큰값을 가지게 되는 최소경로의 시간과 처음의 최소시간의 차를...! 출력
+
 import sys
 sys.stdin = open("week21/2307/2307.txt")
+import heapq
+
+def check1(start):
+    distance[start] = 0 
+    queue = ([0, start]) # 거리, 노드
+
+    while queue:
+        c_dist, c_node = heapq.heappop(queue)
+
+        if c_dist > distance[c_node]:
+            continue
+
+        for goal in range(nodes + 1):
+            if graph[c_node][goal] != float('inf'):
+                distance_to_goal = c_dist + graph[c_node][goal]
+
+                # 더 짧은 경로를 발견한 경우
+                if distance_to_goal < distance[goal]:
+                    print(distance[goal])
+                    distance[goal] = distance_to_goal
+                    heapq.heappush(queue, (distance_to_goal, goal))
+
+
+
 
 nodes, loads = map(int, input().split())
-distance = [0]
+distance = [0] * (loads + 1)
 
 graph = [[0] * (nodes + 1) for _ in range(loads)]
 
@@ -24,5 +52,4 @@ for _ in range(loads):
     graph[a][b] = t
     graph[b][a] = t
 
-def check1():
-    distance[start] = 0 
+check1(0)
