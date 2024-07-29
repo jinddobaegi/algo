@@ -161,15 +161,7 @@ for i in range(len(path) - 1):
     distance = new_distance
     dijkstra(1)
 
-    for j in range(len(graph[a])):
-        if graph[a][j][0] == b:
-            graph[a][j] = original_value_a
-            break
 
-    for j in range(len(graph[b])):
-        if graph[b][j][0] == a:
-            graph[b][j] = original_value_b
-            break
 
     if distance[N] == float("inf"):
         max_delay = -1
