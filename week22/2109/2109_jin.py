@@ -4,11 +4,27 @@ from heapq import heappush, heappop
 input = stdin.readline
 
 N = int(input())  # 대학의 수
-pq = []
-for _ in range(N):
-    p, d = map(int, input().split())
-    heappush((-p, d))
+lectures = list(tuple(map(int, input().split())) for _ in range(N))  # p, d 순
+lectures.sort(key=lambda x: x[1])  # 마감기한 짧은 순 정렬
 
+# d가 겹치는 강연들은
+# 그 기한 안에 몇 개를 할 수 있는지가 관건
+
+# 로직 3
+# j일째에는 최대 j개의 강의 선택 가능
+# + 찾아보니 힙큐를 이용하더라
+# 강의를 하나씩 보자
+
+pq = []
+for p, d in lectures:
+    heappush(pq, p)
+    # pq의 길이, 즉 선택한 강의 개수와
+    # 현재 강의의 기한을 비교
+    # 만약 강의 기한이 선택한 강의보다 크거나 같아야 함
+    if d < len(pq):
+        heappop(pq)
+
+print(sum(pq))
 
 '''
 이게 안되네
@@ -19,9 +35,6 @@ for _ in range(N):
 
 정답 50
 '''
-
-# d가 겹치는 강연들은
-# 그 기한 안에 몇 개를 할 수 있는지가 관건
 
 # 로직 2 -> 실패, 뭔가 이상함
 # 냅색처럼 풀어보자
