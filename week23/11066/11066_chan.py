@@ -63,12 +63,10 @@ def merge_files(file_sizes):
     dp = [[0] * K for _ in range(K)]
     prefix_sum = [0] * (K + 1)
 
-    # Calculate prefix sums
     for i in range(K):
         prefix_sum[i + 1] = prefix_sum[i] + file_sizes[i]
 
-    # dp[i][j] = min cost to merge files from i to j
-    for length in range(2, K + 1):  # length of the subproblem
+    for length in range(2, K + 1):  
         for i in range(K - length + 1):
             j = i + length - 1
             dp[i][j] = float('inf')
