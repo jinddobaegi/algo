@@ -61,6 +61,8 @@ input = sys.stdin.readline
 def merge_files(file_sizes):
     K = len(file_sizes)
     dp = [[0] * K for _ in range(K)]
+    for i in dp:
+        print(i)
     prefix_sum = [0] * (K + 1)
 
     for i in range(K):
@@ -69,6 +71,7 @@ def merge_files(file_sizes):
     for length in range(2, K + 1):  
         for i in range(K - length + 1):
             j = i + length - 1
+            print("i = ",i, "j = ",j)
             dp[i][j] = float('inf')
             for k in range(i, j):
                 cost = dp[i][k] + dp[k + 1][j] + prefix_sum[j + 1] - prefix_sum[i]
