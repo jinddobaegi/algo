@@ -4,17 +4,9 @@ input = stdin.readline
 
 
 def flip(r, c):
-    if not (0 <= r <= N-3 and 0 <= c <= M-3):
-        return
-
-    for i in range(3):
-        nr = r + i
-        for j in range(3):
-            nc = c + j
-            if A[nr][nc]:
-                A[nr][nc] -= 1
-            else:
-                A[nr][nc] += 1
+    for i in range(r, r+3):
+        for j in range(c, c+3):
+            A[i][j] ^= 1  # XOR 연산: 같을 땐 0, 다를 땐 1을 반환
 
 
 N, M = map(int, input().split())
@@ -30,5 +22,10 @@ else:
             if A[i][j] != B[i][j]:
                 flip(i, j)
                 res += 1
+
+        # 한 줄을 바꿔도 다르면 가능성 x
+        if A[i] != B[i]:
+            res = -1
+            break
 
 print(res if A==B else -1)
