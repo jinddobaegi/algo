@@ -65,6 +65,7 @@ DP = [[0, 0] for _ in range(N + 1)]  # 행: 0~N, 열: 0/1
 members = [[[], []] for _ in range(N + 1)]  # 행: 0~N, 열: 0/1일 때 인원
 visited = [0] * (N + 1)
 boss_res = solution(BOSS)
+boss_mems = members[BOSS]
 print(boss_res[1], boss_res[0])
-print(*(sorted(members[1][1]) + [-1]))
-print(*(sorted(members[1][0]) + [-1]))
+print(*(sorted(boss_mems[1]) + [-1]))
+print(*(sorted(boss_mems[0]) + [-1]))
