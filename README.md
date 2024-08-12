@@ -1,7 +1,7 @@
 # Algo Study
 
 <details markdown="1">
-  <summary>24_1st_half</summary>
+  <summary><b>### 24_1st_half</b></summary>
 ### 1주차 (24.02.05 ~ 24.02.11)
 
 - 출제자: 송찬의, 정일규
