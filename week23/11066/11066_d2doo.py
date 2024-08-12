@@ -14,3 +14,4 @@ for _ in range(T):
     for i in range(2, chap + 1):
         for j in range(1, chap + 2 - i): # 배열의 시작점
             # 더 작은 값 넣어주기...를 어케 하누
+
