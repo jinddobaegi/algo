@@ -17,3 +17,24 @@ while end < n:
         start += 1
     ans = max(end-start, ans)
 print(ans)
+
+# import sys
+# input = sys.stdin.readline
+#
+# n, k = map(int, input().split())
+# arr = list(map(int, input().split()))
+#
+# start = 0
+# ans = 0
+# while start < n:
+#     temp = []
+#     temp.append(arr[start])
+#     for end in range(start+1, n):
+#         if temp.count(arr[end]) < k:
+#             temp.append(arr[end])
+#             # print(start, end)
+#         else:
+#             break
+#     start += 1
+#     ans = max(ans, len(temp))
+# print(ans)
