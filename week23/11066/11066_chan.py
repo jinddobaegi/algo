@@ -71,11 +71,12 @@ def merge_files(file_sizes):
     for length in range(2, K + 1):  
         for i in range(K - length + 1):
             j = i + length - 1
-            print("i = ",i, "j = ",j)
             dp[i][j] = float('inf')
             for k in range(i, j):
+                print("cost = dp[",i,"]","[",k,"] + dp[", k + 1,"][",j,"] + prefix_sum[",j + 1,"] - prefix_sum[",i,"]" )
                 cost = dp[i][k] + dp[k + 1][j] + prefix_sum[j + 1] - prefix_sum[i]
                 dp[i][j] = min(dp[i][j], cost)
+                print("dp[i][j]=",dp[i][j], "min(","dp[i][j]=",dp[i][j],",cost=",cost)
 
     return dp[0][K - 1]
 

@@ -62,6 +62,7 @@ def build_tree(parents):
             root = child
         else:
             tree[parents].append(child)
+            print(tree)
     return tree, root
 
 def delete_subtree(tree, delete_node):
