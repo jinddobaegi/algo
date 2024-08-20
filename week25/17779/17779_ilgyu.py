@@ -64,6 +64,7 @@ for _ in range(n):
 
 # 근데 이렇게 다 구해보고 밖으로 나가는 건 없어야 함
 # 이 4개의 for문을 돈 값들이 경계선 좌표들임
+
 def sol(x,y,d1,d2):
     cnt = [0,0,0,0,0]
     f = [[0 for _ in range(n+1)] for _ in range(n+1)]

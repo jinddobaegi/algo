@@ -6,6 +6,8 @@
 # 출력 설명
 # 1 : 모든 도시에 대한 최소 비용
 # 2 : n x n 자리에 [거치는 도시의 개수(3), 거치는 도시(1), 거치는 도시(2), 거치는 도시(3)]
+import sys
+sys.stdin = open("week25/11780/11780.txt")
 
 n = int(input()) # 도시의 수
 m = int(input()) # 버스의 수
@@ -38,7 +40,7 @@ for k in range(1, n + 1): # 거쳐야 하는 노드를 순차적으로 바꿔준
             '''
             if dist[start][k] + dist[k][end] < dist[start][end]:
                 dist[start][end] = dist[start][k] + dist[k][end]
-                next_node[start][end] = next_node[start][k][:] + [k] + next_node[k][end][:]
+                next_node[start][end] = next_node[start][k] + k + next_node[k][end]
 
 
 for start in range(1, n + 1):
