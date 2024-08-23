@@ -1,5 +1,6 @@
-from sys import stdin
+from sys import stdin, setrecursionlimit
 
+setrecursionlimit(10**6)
 input = stdin.readline
 
 # 1) 0~n까지 있더라 == make-set
