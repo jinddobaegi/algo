@@ -9,7 +9,7 @@ for _ in range(N-1):
     adj_list[a].append(b)
     adj_list[b].append(a)
 
-route = list(map(int, input().split()))
+route = tuple(map(int, input().split()))
 
 # 어차피 bfs는
 # 같은 깊이에 있는 것들을 다 돌고 난 뒤
@@ -22,11 +22,11 @@ route = list(map(int, input().split()))
 # 해당 노드에서 이동 가능한 노드들 묶어서 enqueue
 # 반복
 
-q = list([] for _ in range(N+1))  # 단계 별로 저장할 것임
+# 시간 초과
+q = list(set() for _ in range(N+1))  # 단계 별로 저장할 것임
 visited = [0] * (N+1)
-q[1].append(1)
+q[1].add(1)
 visited[1] = 1
-selected = [0] * (N+1)
 depth = 1
 idx = 0
 while depth != N:
@@ -34,22 +34,16 @@ while depth != N:
         depth += 1
         continue
     x = route[idx]
-    # print(f'd는 {depth}, x는 {x}')
     v = 0
     if x in q[depth]:
         v = x
         q[depth].remove(v)
-        selected[v] = 1
         idx += 1
+        for w in adj_list[v]:
+            if not visited[w]:
+                q[depth + 1].add(w)
+                visited[w] = 1
     else:
         break
 
-    for w in adj_list[v]:
-        if not visited[w]:
-            q[depth+1].append(w)
-            visited[w] = 1
-
-if sum(selected) == N:
-    print(1)
-else:
-    print(0)
+print(int(idx == N))
