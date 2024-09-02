@@ -14,3 +14,5 @@ while S > 0 and i < N:
     else:
         i += 1
 print(*arr)
+
+
