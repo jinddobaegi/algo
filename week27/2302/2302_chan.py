@@ -7,16 +7,16 @@ def solution():
     M = int(input())
     
     vip = [0] * (M + 2)
-    print(vip)
+    # print(vip)
     for i in range(1, M + 1):
         vip[i] = int(input())
     vip[M + 1] = N + 1
-    print(vip)
+    # print(vip)
     
     dp = [0] * (N + 1) 
     dp[0] = 1
     dp[1] = 1
-    print(dp)
+    # print(dp)
     if N > 1:
         dp[2] = 2
     
