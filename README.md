@@ -296,7 +296,7 @@ _1주 간의 신나는 여름 휴가~_
 
 - 출제자: 송찬의, 이윤정, 정지수
 - 문제:
-[](https://www.acmicpc.net/problem/),
+[2580](https://www.acmicpc.net/problem/2580),
 [16197](https://www.acmicpc.net/problem/16197),
 [16234](https://www.acmicpc.net/problem/16234)
 
