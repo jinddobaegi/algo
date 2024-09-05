@@ -28,12 +28,15 @@ def sudoku(z_idx):
         for line in arr:
             print(*line)
         exit()
+        # return True  # exit() 쓰기 싫어서 찾아본 방법인데 시간이 2000ms정도 더 걸린다
 
     for num in range(1, 10):
         r, c = zeros[z_idx]
         if check_row(r, num) and check_col(c, num) and check_square(r, c, num):
             arr[r][c] = num
             sudoku(z_idx+1)
+            # if sudoku(z_idx+1):
+            #     return
             arr[r][c] = 0
 
 
