@@ -22,6 +22,7 @@ for _ in range(n):
 
 # s에서 리스트 하나하나 꺼내가지고 경우의수를 따지기
 ans = 0
+
 for t in permutations((range(1, 9)), 8):
     t = list(t[:3]) + [0] + list(t[3:]) # 1번선수가 4번타자 고정
     # t는 타자 출전 순서의 경우의 수
@@ -34,6 +35,7 @@ for t in permutations((range(1, 9)), 8):
 
     hitter = 0 # 현재타자(인덱스 값)
     res = 0 # 이번이닝 점수
+
     for i in range(n):
         out = 0 # 현재 몇 아웃인지
         base = [0, 0, 0, 0] # 각 베이스에 몇명 있는지
@@ -43,6 +45,7 @@ for t in permutations((range(1, 9)), 8):
 
             if hit == 0:
                 out += 1
+
             elif hit == 1: # 안타
                 res += base[3] # 3루에 주자있으면 안타일 때 그만큼 점수 먹으니까
                 base = [0, 1, base[1], base[2]] # 한칸씩 값들이 전진
