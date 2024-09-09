@@ -6,7 +6,6 @@ input = sys.stdin.readline
 
 board = [list(map(int, input().split()))for _ in range(9)]
 
-
 # ------------------------------------------------------------
 # 첫번째 풀이 실패(다시 채우기를 안해서 그런가봄)
 
@@ -118,5 +117,42 @@ board = [list(map(int, input().split()))for _ in range(9)]
 # ------------------------------------------------------------------------------------------------------
 # 세번째 풀이...
 
+empty_cells = [(i, j) for i in range(9) for j in range(9) if board[i][j] == 0]
 
+def is_valid(i, j, num):
+    # 가로줄, 세로줄 검사
+    for x in range(9):
+        if board[i][x] == num or board[x][j] == num:
+            return False
     
+    # 3x3 박스 검사
+    start_row, start_col = (i // 3) * 3, (j // 3) * 3
+    for r in range(start_row, start_row + 3):
+        for c in range(start_col, start_col + 3):
+            if board[r][c] == num:
+                return False
+    
+    return True
+
+
+def sudoku(index):
+    if index == len(empty_cells):
+        return True
+
+    i, j = empty_cells[index]
+    for num in range(1, 10):
+        if is_valid(i, j, num):
+            board[i][j] = num
+            if sudoku(index + 1):
+                return True
+            board[i][j] = 0
+    return False
+
+sudoku(0)
+
+for bo in board:
+    print(*bo)
+
+# ------------------------------------------------------------------------------------------------------
+# 네번쨰 풀이 
+
