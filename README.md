@@ -118,7 +118,7 @@
 [1197](https://www.acmicpc.net/problem/1197),
 [4386](https://www.acmicpc.net/problem/4386),
 [10025](https://www.acmicpc.net/problem/10025)
-- 벌금: 송찬의(1문제 * 2000원), 정일규(1문제 * 3000)
+- 벌금: 송찬의(1문제 * 2000), 정일규(1문제 * 3000)
 
 ---
 
@@ -129,7 +129,7 @@
 [1922](https://www.acmicpc.net/problem/1922),
 [12015](https://www.acmicpc.net/problem/12015),
 [17471](https://www.acmicpc.net/problem/17471)
-- 벌금: 송찬의(2문제 * 3000원), 박수민(1문제 * 3000원)
+- 벌금: 송찬의(2문제 * 3000), 박수민(1문제 * 3000)
 
 ---
 
@@ -161,7 +161,7 @@
 [14502](https://www.acmicpc.net/problem/14502),
 [17136](https://www.acmicpc.net/problem/17136),
 [14500](https://www.acmicpc.net/problem/14500)
-- 벌금: 박수민(1문제 * 4000원)
+- 벌금: 박수민(1문제 * 4000)
 
 ---
 
@@ -268,7 +268,7 @@ _1주 간의 신나는 여름 휴가~_
 [11047](https://www.acmicpc.net/problem/11047),
 [11780](https://www.acmicpc.net/problem/11780),
 [17779](https://www.acmicpc.net/problem/17779)
-- 벌금: 정지수(1문제 * 2천원)
+- 벌금: 정지수(1문제 * 2000)
 
 ---
 
@@ -299,15 +299,26 @@ _1주 간의 신나는 여름 휴가~_
 [2580](https://www.acmicpc.net/problem/2580),
 [16197](https://www.acmicpc.net/problem/16197),
 [16234](https://www.acmicpc.net/problem/16234)
+- 벌금: 이윤정(3문제 * 3000)
 
 ---
 
-### 벌금 누적합(~27주차)
+### 29주차 (24.09.09 ~ 24.09.15)
+
+- 출제자: 정일규, 정진영(2문제)
+- 문제:
+[1520](https://www.acmicpc.net/problem/1520),
+[1806](https://www.acmicpc.net/problem/1806),
+[2110](https://www.acmicpc.net/problem/2110)
+
+---
+
+### 벌금 누적합(~28주차)
 |     이름      |   벌금   |
 |:-----------:|:------:|
 | 박수민(1~18주차) | 13,000 |
 |  송찬의(1주차~)  | 12,000 |
-|  이윤정(1주차~)  | 4,000  |
+|  이윤정(1주차~)  | 13,000 |
 |  정일규(1주차~)  | 6,000  |
 |  정지수(1주차~)  | 5,000  |
 |  정진영(1주차~)  |   0    |
