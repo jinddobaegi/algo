@@ -323,7 +323,7 @@ _추석~_
 - 문제:
 [2056](https://www.acmicpc.net/problem/2056),
 [2565](https://www.acmicpc.net/problem/2565),
-[tmp](https://www.acmicpc.net/problem/tmp)
+[11729](https://www.acmicpc.net/problem/11729)
 
 ---
 
