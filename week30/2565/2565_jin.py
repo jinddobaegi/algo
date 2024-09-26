@@ -1,5 +1,4 @@
 from sys import stdin
-from collections import deque
 
 input = stdin.readline
 
@@ -9,15 +8,47 @@ input = stdin.readline
 N = int(input())
 arr = list(tuple(map(int, input().split())) for _ in range(N))
 arr.sort()
-# print(arr)
 
-stack = deque()
-cnt = 0
-for i in range(N):
-    while stack and stack[-1][1] > arr[i][1]:
-        stack.pop()
-        cnt += 1
+# dp[k]: A의 k번째까지 전깃줄까지 확인했을 때
+# 가장 길게 교차가 없었던 길이를 저장할 것임
+dp = [1] * N  # 기본으로 한 개씩은 가능하니까 1로 초기화
 
-    stack.append(arr[i])
+for ai in range(1, N):    # ai와 연결된 b를 확인하기 위해
+    for aj in range(ai):  # ai 이전에 있는 것들 aj의 연결된 b를 확인
+        if arr[aj][1] < arr[ai][1]:
+            dp[ai] = max(dp[ai], dp[aj]+1)
+            # aj를 돌리면서 ai를 갱신
+            # 그 ai는 aj for문이 한 바퀴 돌고 나면
+            # 다음 ai 차례에서 aj의 역할을 맡게 됨!
 
-print(cnt)
+            # ai가 1, aj가 0일 때부터 확인했기 때문에
+            # aj에는 이전에 ai가 돌면서 저장되었던 가능한 최대 길이가 저장되어 있음
+            # ai에는 그 aj 상태에서 ai까지 이어서 더 추가할 수 있는지를 확인하는 것임!
+
+print(N - max(dp))
+
+# 실패 코드
+
+# def solution(input_arr, is_b):
+#     stack = deque()
+#     cnt = 0
+#     for i in range(N):
+#         while stack and stack[-1][is_b] > input_arr[i][is_b]:
+#             stack.pop()
+#             cnt += 1
+#
+#         stack.append(input_arr[i])
+#
+#     return cnt
+#
+# arr.sort()
+# # print(arr)
+# is_b = True
+# min_v = min(int(1e9), solution(arr, is_b))
+#
+# arr.sort(key=lambda x: (x[1], x[0]))
+# # print(arr)
+# is_b = False
+# min_v = min(min_v, solution(arr, is_b))
+#
+# print(min_v)
