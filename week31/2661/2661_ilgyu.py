@@ -1,32 +1,30 @@
 import sys
 sys.stdin = open('input.txt')
 
-n, c = map(int, input().split())
-home = []
-for _ in range(n):
-    a = int(input())
-    home.append(a)
-home.sort()
+n = int(input())
 
-# start, end는 공유기 사이의 최소, 최대거리
-start, end = 1, home[n-1] - home[0]
-ans = 0
-while start <= end:
-    mid = (start + end) // 2
-    current = home[0]
-    cnt = 1 # 현재 설치한 공유기의 수
-    # 여기까지 봤을 때 맨 첨에 첫 번쨰 집에 공유기를 설치하고 시작
+def find(x):
+    x = str(x)
+    k = len(x)
+    for i in range(1, k // 2 + 1): # n자리 수 최대 절반
+        # 절반
+        if x[-i:] == x[-2*i:-i]: # sol함수에서 뒤쪽에 새로운 숫자를 붙이니까 뒤부터 검사
+                                 # 반복검사 할때 뒤에서부터 함
+            return False
 
-    for i in range(1, len(home)):
-        # 이 for문에서 home[i]는 다음 공유기의 위치
-        if home[i] >= current + mid:
-            cnt += 1
-            current = home[i]
+        # if x[:i] == x[i:2*i]: # 얘도 절반 비교하는 거 같지만 이렇게하면 12111111 이런 케이스가 답으로 나와버림
+        #     return False
+    return True
 
-    if cnt >= c:
-        start = mid + 1
-        ans = mid
+# 1,2,3으로만 n자리 수열을 만들어서
+def sol(num):
+    if len(str(num)) == n:
+        print(num)
+        exit()
     else:
-        end = mid - 1
-print(ans)
+        for i in range(1, 4):
+            if find(num*10 + i):
+                sol(num*10 + i)
 
+sol(1)
+# 2023이랑 비슷함
