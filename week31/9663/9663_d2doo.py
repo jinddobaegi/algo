@@ -19,6 +19,7 @@ def n_queens(start):
             arr[start] = i # (start, i)
             if attack(start): # 퀸을 놓을 수 있으면?
                 n_queens(start + 1)
+arr[1] = 2 => 1행 2열에 놓는다는 뜻
 
 arr = [0] * N
 ans = 0
