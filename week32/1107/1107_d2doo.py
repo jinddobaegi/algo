@@ -1,0 +1,14 @@
+# 리모컨
+
+N = int(input())
+M = int(input())
+if M:
+    break_btn = [map(int, input().split())]
+else:
+    break_btn = ''
+
+start = 100
+min_v = abs(100 - N)
+??????????????????
+
+
